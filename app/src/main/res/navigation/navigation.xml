@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/dataFragment">
+
+    <fragment
+        android:id="@+id/dataFragment"
+        android:name="org.d3if2096.notebook.data.DataFragment"
+        android:label="Notebook"
+        tools:layout="@layout/fragment_data" >
+        <action
+            android:id="@+id/action_dataFragment_to_noteFragment"
+            app:destination="@id/noteFragment" />
+        <action
+            android:id="@+id/action_dataFragment_to_motivasiFragment"
+            app:destination="@id/motivasiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/noteFragment"
+        android:name="org.d3if2096.notebook.datanote.NoteFragment"
+        android:label="Note"
+        tools:layout="@layout/fragment_note"/>
+    <fragment
+        android:id="@+id/motivasiFragment"
+        android:name="org.d3if2096.notebook.motivasi.MotivasiFragment"
+        android:label="Motivasi"
+        tools:layout="@layout/fragment_motivasi"/>
+</navigation>
